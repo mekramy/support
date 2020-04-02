@@ -1,0 +1,55 @@
+{
+    "name": "mekramy/support",
+    "description": "Support libraries and functions for laravel",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "response",
+        "select as",
+        "pagination",
+        "rate limiter",
+        "validation"
+    ],
+    "authors": [
+        {
+            "email": "m.ajamekramy@gmail.com",
+            "homepage": "http://ekramy.ir",
+            "name": "M Ekramy",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "ext-json": "*",
+        "hekmatinasser/verta": ">=1.10",
+        "illuminate/cache": ">=7.0",
+        "illuminate/database": ">=7.0",
+        "illuminate/http": ">=7.0",
+        "illuminate/pagination": ">=7.0",
+        "illuminate/routing": ">=7.0",
+        "illuminate/support": ">=7.0",
+        "illuminate/validation": ">=7.0",
+        "mekramy/oop-util": "^1.0",
+        "mekramy/php-util": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MEkramy\\Support\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "MEkramy\\Support\\SupportServiceProvider"
+            ]
+        }
+    }
+}
