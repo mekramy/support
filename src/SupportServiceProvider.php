@@ -40,6 +40,8 @@ class SupportServiceProvider extends ServiceProvider
         Validator::replacer('unsigned', Validators::class . '@unsignedReplacer');
         Validator::extend('range', Validators::class . '@range');
         Validator::replacer('range', Validators::class . '@rangeReplacer');
+        Validator::extend('minlength', Validators::class . '@minlength');
+        Validator::replacer('minlength', Validators::class . '@minlengthReplacer');
         Validator::extend('maxlength', Validators::class . '@maxlength');
         Validator::replacer('maxlength', Validators::class . '@maxlengthReplacer');
         Validator::extend('idnumber', Validators::class . '@idnumber');

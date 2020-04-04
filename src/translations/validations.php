@@ -9,6 +9,7 @@ return [
     "unsigned" => "unsigned",
     "range" => "range",
     "maxlength" => "maxlength",
+    "minlength" => "minlength",
     "idnumber" => "idnumber",
     "nationalcode" => "nationalcode",
     "jalali" => "jalali",

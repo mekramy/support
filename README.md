@@ -227,10 +227,12 @@ class LoginController extends Controller
 
 **identifer** match any numeric value greater then 0
 
+**minlength** check min length of input (input parsed to string).
+
 **maxlength** check max length of input (input parsed to string).
 
 ```php
-    "username" => "maxlength:10"
+    "username" => "minlength:3|maxlength:10"
 ```
 
 **unsigned** match any numeric value greater then or equal 0

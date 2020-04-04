@@ -52,14 +52,24 @@ class Validators
         return trans("mekramy-support::validations.identifier");
     }
 
+    public function minlength($attribute, $value, $parameters, $validator)
+    {
+        $length = (isset($parameters[0]) && is_numeric($parameters[0])) ? intval($parameters[0]) : 1;
+        return mb_strlen($value) >= $length;
+    }
+    public function minlengthReplacer($message, $attribute, $rule, $parameters)
+    {
+        return trans("mekramy-support::validations.minlength");
+    }
+
     public function maxlength($attribute, $value, $parameters, $validator)
     {
         $length = (isset($parameters[0]) && is_numeric($parameters[0])) ? intval($parameters[0]) : 1;
-        return strlen($value) <= $length;
+        return mb_strlen($value) <= $length;
     }
     public function maxlengthReplacer($message, $attribute, $rule, $parameters)
     {
-        return trans("mekramy-support::validations.max");
+        return trans("mekramy-support::validations.maxlength");
     }
 
     public function unsigned($attribute, $value, $parameters, $validator)
@@ -143,7 +153,7 @@ class Validators
     public function length($attribute, $value, $parameters, $validator)
     {
         $length = (isset($parameters[0]) && is_numeric($parameters[0])) ? intval($parameters[0]) : 1;
-        return strlen($value) <= $length;
+        return mb_strlen($value) <= $length;
     }
     public function lengthReplacer($message, $attribute, $rule, $parameters)
     {
